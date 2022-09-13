@@ -1,0 +1,26 @@
+.root {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chat {
+  height: 80vh;
+  border: 1px solid #fff;
+  margin: 15px 0px;
+  overflow-y: scroll;
+}
+
+.input {
+  text-align: center;
+
+  input {
+    border: none;
+    width: 80%;
+    height: 35px;
+    border-radius: 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+}
