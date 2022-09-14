@@ -18,17 +18,26 @@ const Chat = () => {
   );
 
   const sendMessage = async () => {
-    firestore.collection('messages').add({
-      uid: user.uid,
-      email: user.email,
-      text: value,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-    });
-    setValue('');
+    if (value) {
+      await firestore.collection('messages').add({
+        uid: user.uid,
+        email: user.email,
+        text: value,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+
+      setValue('');
+    }
   };
 
   const onChangeInput = (e) => {
     setValue(e.target.value);
+  };
+
+  const keyPressHandler = (e) => {
+    if (e.key === 'Enter') {
+      sendMessage(value);
+    }
   };
 
   if (loading) {
@@ -52,6 +61,7 @@ const Chat = () => {
         <input
           value={value}
           onChange={onChangeInput}
+          onKeyPress={keyPressHandler}
           type='text'
           placeholder='Напишите сообщение...'
         />
