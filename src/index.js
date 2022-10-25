@@ -7,12 +7,13 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyBlrOtGbHrUHM6qMu35DxU_Yu__5zN41fU',
-  authDomain: 'react-realtime-chat-d8334.firebaseapp.com',
-  projectId: 'react-realtime-chat-d8334',
-  storageBucket: 'react-realtime-chat-d8334.appspot.com',
-  messagingSenderId: '1071781708366',
-  appId: '1:1071781708366:web:1cf58f2197a51074b5791f',
+  apiKey: 'AIzaSyA03EMGxrGx7O_5s8cPiGp3ZWxLSzOtAv4',
+  authDomain: 'react-chat-8e94c.firebaseapp.com',
+  projectId: 'react-chat-8e94c',
+  storageBucket: 'react-chat-8e94c.appspot.com',
+  messagingSenderId: '638508899109',
+  appId: '1:638508899109:web:b07a52d9eea51b63bcd8cc',
+  measurementId: 'G-BJ57QW1LN2',
 });
 
 export const Context = React.createContext(null);
